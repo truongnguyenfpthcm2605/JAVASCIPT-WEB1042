@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p id="solanchoi"></p>
+        <input type="text" id="so1" value="">
+        <input type="text" id="pheptinh" value="+">
+        <input type="text" id="so2" value="">
+        <input type="text" id="kq">
+        <button onclick="taoso()">Tạo Số</button>
+        <button onclick="ketqua()">KẾt quả</button>
+        <p id="text"></p>
+    </div>
+    <script>
+        var so1;
+        var so2;
+
+        function taoso() {
+            so1 = Math.round(100 * Math.random());
+            so2 = Math.round(100 * Math.random());
+            document.getElementById("so1").value = so1;
+            document.getElementById("so2").value = so2;
+        }
+        function ketqua() {
+            var x = document.getElementById("so1").value;
+            var y = document.getElementById("so2").value;
+            var pt = document.getElementById("pheptinh").value;
+            x = parseInt(x);
+            y = parseInt(y);
+            var kq = 0;
+            kq = so1 + so2;
+            var nhapKQ = document.getElementById("kq").value;
+            nhapKQ = parseInt(nhapKQ);
+            var text = document.getElementById("text");
+            var slx
+            if (nhapKQ == kq) {
+                document.getElementById("text").innerHTML = "Chính Xác Hay Lắm Mời Bé Tiếp Tục";
+            } else {
+                document.getElementById("text").innerHTML = "Sai rồi bé ơi";
+            }
+            var slc = sessionStorage.getItem('solanchoi');
+            if (slc == null) slc = 0;
+            slc++;
+            sessionStorage.setItem('solanchoi', slc);
+            document.getElementById("solanchoi").innerHTML = "Bé Đã Chơi " + slc + " lần";
+        }
+    </script>
+</body>
+
+</html>

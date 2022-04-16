@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS24083</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"> </script>
+    
+</head>
+
+<body ng-app="b1">
+    <div class="container" ng-controller="hienthi">
+        <div>
+            <img src="hinh1.jpg">
+        </div>
+        <ul>
+            <li><span>Họ tên : </span>{{hoten}}</li>
+            <li><span>Ngày sinh : </span>{{ngaysinh}}</li>
+            <li><span>Giới Tính : </span>{{gender}}</li>
+            <li><span>Điểm: </span>{{mark}}</li>
+
+        </ul>
+
+    </div>
+</body>
+
+</html>
+<script>
+    app = angular.module("b1", []);
+    app.controller("hienthi",xuly);
+     function xuly ($scope){
+        $scope.hoten = 'Nguyễn Văn Trường';
+        $scope.ngaysinh = '26/05/2001';
+        $scope.gender = 'Nam';
+        $scope.photo = 'hinh1.jpg';
+        $scope.mark = 10;
+     }
+   
+</script>
+<style>
+    .container {
+        width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        border: 2px double yellow;
+        padding: 10px;
+    }
+
+    img {
+        width: 100%;
+
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    h4 {
+        color: chocolate;
+        font-weight: bold;
+        font-size: 30px;
+    }
+</style>

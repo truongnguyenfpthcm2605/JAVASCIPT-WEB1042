@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS4083</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>BẠN NHỚ TỚI MẸ KHI NÀO?</h1>
+        <div id="screen"></div>
+        <form action="">
+            <input type="checkbox" name="me" value="Đói">Đói <br>
+            <input type="checkbox" name="me" value="No">No<br>
+            <input type="checkbox" name="me" value="Bệnh ">Bệnh<br>
+            <input type="checkbox" name="me" value="Vui">Vui<br>
+            <input type="checkbox" name="me" value="Buồn">Buồn<br>
+            <button id="bt" type="button" onclick="check()">Chọn</button>
+            <button type="button" onclick="reset()">Reset</button>
+
+        </form>
+    </div>
+</body>
+
+</html>
+<style>
+    button {
+        width: 100px;
+        line-height: 30px;
+        background-color: red;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: blueviolet;
+    }
+
+    #screen {
+        width: 200px;
+        height: 300px;
+        background-color: aqua;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    form {
+        margin-top: 10px;
+    }
+</style>
+<script>
+    var arr = document.getElementsByName("me"); // tao mang các the input co name = me;
+    var kq = document.getElementById("screen"); // div hien kq;
+    function check() {
+
+
+        var diem = 0; // biens xac nhan da chon hay chưa
+        kq.innerHTML = ""; // gia tri rỗng chi kq truoc;
+        for (var i = 0; i < arr.length; i++) { // chay vong lap
+            if (arr[i].checked) { // neu the input nao có attribute = checked thi xuát
+                var v = arr[i].value; // lay gia tri cua the input
+                var chu = document.createTextNode(v); // tao biens + them text la gia tri cua the input
+                var tag = document.createElement("p"); // tao the p
+                tag.appendChild(chu); // them text intput vao the p
+                kq.appendChild(tag); // them the p vao div kq
+                diem++; // tang biens diêm;
+
+            }
+        }
+        if (diem > 0) { // neu diem = 0 , chua chon input nao
+            kq.style.backgroundColor="blue"; // gan class cho div kq, css
+        } else {
+            kq.innerHTML = "bạn chưa chọn mục nào";// gan gia tri text cho div kq neu chua chon mua nao
+            kq.style.backgroundColor="yellow";// gan class css
+        }
+    }
+    function reset() {
+      
+    }
+
+</script>

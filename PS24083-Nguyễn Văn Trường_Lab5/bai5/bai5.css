@@ -1,0 +1,32 @@
+container {
+  width: 700px;
+  margin: auto;
+  border: 0.5px solid black;
+  background: darkkhaki;
+}
+.row {
+  display: flex;
+  line-height: 36px;
+  text-align: center;
+}
+.row > div {
+  background: wheat;
+  width: 25%;
+  border: 0.5px solid black;
+}
+header,
+footer {
+  font-weight: bold;
+  color: crimson;
+}
+button {
+  width: 100px;
+  height: 35px;
+}
+.head {
+  padding: 10px;
+}
+.head span {
+  float: right;
+  font-style: italic;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS24083</title>
+    <script>
+        var so1 = null;
+        var so2 = null;
+        var phepTinh = null;
+        var kq = null;
+        var i=0;
+
+        function ganSo(x) {
+            // if (so1 == null) {
+            //     so1 = x;
+            // } else {
+            //     so2 = x;
+            // }
+            if(i%2==0) {
+                so1 =x;
+            }else{
+                so2 = x;
+            }
+            i++;
+
+        }
+        function ganPhepTinh(x) {
+            phepTinh = x;
+        }
+        function thucHien() {
+            switch (phepTinh) {
+                case '+':
+                    document.getElementById("so1").innerHTML = so1;
+                    document.getElementById("so2").innerHTML = so2;
+                    document.getElementById("pt").innerHTML = phepTinh;
+                    document.getElementById("kq").innerHTML = " = " + (so1 + so2);
+                    break;
+                case '-':
+                    document.getElementById("so1").innerHTML = so1;
+                    document.getElementById("so2").innerHTML = so2;
+                    document.getElementById("pt").innerHTML = phepTinh;
+                    document.getElementById("kq").innerHTML = " = " + (so1 - so2);
+                    break;
+                case 'x':
+                    document.getElementById("so1").innerHTML = so1;
+                    document.getElementById("so2").innerHTML = so2;
+                    document.getElementById("pt").innerHTML = phepTinh;
+                    document.getElementById("kq").innerHTML = " = " + (so1 * so2);
+                    break;
+                case ':':
+                    document.getElementById("so1").innerHTML = so1;
+                    document.getElementById("so2").innerHTML = so2;
+                    document.getElementById("pt").innerHTML = phepTinh;
+                    document.getElementById("kq").innerHTML = " = " + (so1 / so2);
+                    break;
+            }
+        }
+        function reset() {
+            var so1 = null;
+            var so2 = null;
+            var phepTinh = null;
+            var kq = null;
+        }
+
+    </script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .container {
+            width: 35%;
+            margin: 10px auto;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .maytinh {
+            width: 70%;
+            border: 1px solid red;
+            border-radius: 20px;
+            padding: 5px;
+            height: auto;
+            margin: 0 auto;
+            background-color: darkgrey;
+
+
+        }
+
+        .screen {
+            width: 95%;
+            margin: 10px auto;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            height: 100px;
+            text-align: center;
+            position: relative;
+        }
+
+
+        h1 {
+            text-align: center;
+            margin: 10px;
+            color: #DD4A48;
+            font-weight: 300;
+
+        }
+
+        .screen h6 {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            background-color: black;
+            color: aliceblue;
+        }
+        .result{
+            display: flex;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            height: 80%;
+            width: 90%;
+            background-color: aliceblue;
+            border-radius: 20px;
+            justify-content: center;
+        }
+        .result p{
+            padding: 10px;
+        }
+
+      
+
+        
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+
+        }
+
+        tr {
+            width: 100%;
+            height: 100px;
+        }
+
+        td {
+            width: 25%;
+            height: 90px;
+            margin: 0 auto;
+        }
+
+        button {
+            width: 90%;
+            height: 95%;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            font-size: 25px;
+
+        }
+
+        button:hover {
+            background-color: #FFB72B;
+            transform: scale(1.05);
+            transition: all .5s linear;
+            font-size: 35px;
+            color: aliceblue;
+
+        }
+
+        .kq {
+            background-color: #B5FE83;
+        }
+
+        .color:hover {
+            background-color: #B5FE83;
+        }
+
+        .sum:hover {
+            background-color: #DD4A48;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>MÁY TÍNH JAVASCRIPT</h1>
+        <h2 style="text-align: center;color: #FFB72B; padding-bottom: 10px;">Tác Giả : Nguyễn Văn Trường -PS24083</h2>
+        <div class="maytinh">
+            <h1>CASIO</h1>
+            <div class="screen">
+                <h6>G</h6>
+                <div class="result">
+                    <p id="so1"></p>
+                    <p id="pt"></p>
+                    <p id="so2" ></p>
+                    <p id="kq"></p>
+                </div>
+                
+
+
+            </div>
+            <table>
+                <tr>
+                    <td><button onclick="ganSo(7);">7</button></td>
+                    <td><button onclick="ganSo(8);">8</button></td>
+                    <td><button onclick="ganSo(9);">9</button></td>
+                    <td><button class="color" onclick="ganPhepTinh('+');">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="ganSo(4);">4</button></td>
+                    <td><button onclick="ganSo(5);">5</button></td>
+                    <td><button onclick="ganSo(6);">6</button></td>
+                    <td><button class="color" onclick="ganPhepTinh('-');">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="ganSo(1);">1</button></td>
+                    <td><button onclick="ganSo(2);">2</button></td>
+                    <td><button onclick="ganSo(3);">3</button></td>
+                    <td><button class="color" onclick="ganPhepTinh('x');">x</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="document.getElementById('so').innerHTML = ganSo(0);">0</button></td>
+                    <td><button type="reset" onclick="reset()">C</button></td>
+                    <td><button class="sum" onclick="thucHien()">=</button></td>
+                    <td><button class="color" onclick="ganPhepTinh(':');">:</button></td>
+                </tr>
+                <!-- <tr>
+                    <td><button class="kq" id="so1"></button></td>
+                    <td><button class="kq" id="pt"></button></td>
+                    <td><button class="kq" id="so2"></button></td>
+                    <td><button class="kq" id="kq"></button></td>
+                </tr> -->
+
+
+
+            </table>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

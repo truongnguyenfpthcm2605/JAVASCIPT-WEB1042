@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap');
+html, body{
+    font-family: 'Fira Sans', sans-serif;
+    background: url("Banner-WEB_Desktop-1.jpg") no-repeat;
+    background-size: 100% ;
+    
+}
+.container{
+    width: 600px;
+    margin: 0 auto;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    
+    
+}
+h1{
+    text-align: center;
+    color: coral;
+}
+form{
+    width: 90%;
+    margin: 0 auto;
+   
+}
+form div{
+    margin-bottom: 15px;
+}
+.edit{
+    width: 95%;
+    padding: 10px;
+    border: none;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    outline: none;
+}
+.new{
+    width: 92%;
+    border-radius: 10px;
+}
+button{
+    width: 100px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    line-height: 30px;
+    background-color: coral;
+}
+button:hover{
+    transform: scale(1.04);
+    transition: all .5s linear;
+    background-color: chartreuse;
+    color: aliceblue;
+    font-weight: bold;
+}
+p{
+   color: red;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    
+}
+.error{
+    width: 95%;
+    padding: 10px;
+    border: none;
+    background-color: yellow;
+    border-radius: 10px;
+    outline: none;
+}

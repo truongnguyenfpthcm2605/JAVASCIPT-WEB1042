@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS24083 -Nguyễn VĂn Trường</title>
+</head>
+<body id="background">
+    <h2>ĐỒNG HỒ</h2>
+    <div class="container">
+        <div class="day">
+            <span id="hours">00</span>
+        </div>
+        <div class="month">
+            <span id="minutes">00</span>
+        </div>
+        <div class="year">
+            <span id="seconds">00</span>
+        </div>
+    </div>
+    
+    <div class="switch">
+        <button onclick="oclock()">Nạp Lại</button>
+    </div>
+    <h1 id="hi"> Chào</h1>
+    <h1 id="hello"></h1>
+</body>
+</html>
+<style>
+    .container{
+        width: 500px;
+        margin: 0 auto;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border: none;
+    }
+    h2{
+        text-align: center;
+        color: brown;
+        font-weight: 200;
+    }
+    div{
+        width: 30%;
+        height: auto;
+        
+        text-align: center;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border: none;
+        line-height: 50px;
+      
+        
+
+    }
+    .day{
+        background-color: #6BCB77;
+    }
+    .month{
+        background-color: #FFD93D;
+    }
+    .year{
+        background-color: #FD5D5D;
+    }
+    .switch{
+        width: 150px;
+        height: 50px;
+        margin: 10px auto;
+    }
+    button{
+        width: 100px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border: none;
+        line-height: 30px;
+        border-radius: 5px;
+        
+    }
+    button:hover{
+        background-color:chartreuse ;
+        color: white;
+        transition: all .5s linear;
+        transform: scale(1.03);
+    }
+    h1{
+        text-align: center;
+        color: #6BCB77;
+    }
+</style>
+<script>
+    var check =null;
+    var hours;
+  function time(){
+     
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    document.getElementById("hours").innerHTML = hours+ " Giờ";
+    document.getElementById("minutes").innerHTML = minutes + " Phút";
+    document.getElementById("seconds").innerHTML = seconds + " Giây";
+       
+        if(hours >18){
+            document.getElementById("hi").innerHTML = "Good Evening! ";
+            document.getElementById("background").style.backgroundColor ="black";
+        }else if(hours > 12){
+            document.getElementById("hi").innerHTML = "Good Afternoon! ";
+
+        }else{
+            document.getElementById("hi").innerHTML = "Good Morning! ";
+            document.getElementById("background").style.backgroundColor ="white";
+        }
+  }
+ 
+  function oclock(){
+      if(check==null) check = setInterval("time()", 1000);
+      else{
+          clearInterval(check);
+          check=null;
+      }
+  }
+  setInterval(function(){
+    alert("Hello Thầy Yêu Dấu");
+  },5000);
+
+
+</script>

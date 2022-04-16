@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS24083-Nguyễn Văn Trường</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 1140px;
+            margin: auto;
+            border: 1px solid darkgrey;
+           
+            
+        }
+
+        header {
+            background: darkolivegreen;
+            height: 220px;
+            position: relative;
+        }
+
+        main {
+            background: darkseagreen;
+            min-height: 400px;
+        }
+        footer{
+            width: 100%;
+            height: 100px;
+            background-color: #127fd6;
+        }
+
+      
+
+        #chao {
+            color: deeppink;
+            font-weight: bold;
+            font-style: italic;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            font-size: 30px;
+          
+            
+        }
+      
+        
+
+        div .question {
+            width: 80%;
+            margin: 0 auto;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            height: 300px;
+        }
+        main div p {
+            line-height: 20px;
+            font-weight: 600;
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 10px;
+        }
+
+        main h1 {
+            text-align: center;
+            margin-left: 20px;
+        }
+        #dong_ho #thoi_gian {
+            display: flex;
+        }
+
+        #dong_ho #thoi_gian div {
+            position: relative;
+            margin: 0 5px;
+        }
+
+        #dong_ho #thoi_gian div span {
+            position: relative;
+            display: block;
+            width: 100px;
+            height: auto;
+            background: #2196f3;
+            color: #fff;
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            z-index: 3;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+        }
+
+        #dong_ho #thoi_gian span:nth-child(2) {
+            height: 65px;
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
+            z-index: 2;
+            box-shadow: none;
+            background: #127fd6;
+            text-transform: uppercase;
+        }
+
+        #dong_ho #thoi_gian div:last-child span {
+            background: #ff006a;
+        }
+
+        #dong_ho #thoi_gian div:last-child span:nth-child(2) {
+            background: #ec0062;
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div id="dong_ho">
+                <h2>Thời gian bây giờ là:</h2>
+                <div id="thoi_gian">
+                    <div>
+                        <span id="gio">00</span><span>Giờ</span>
+                    </div>
+                    <div>
+                        <span id="phut">00</span><span>Phút</span>
+                    </div>
+                    <div>
+                        <span id="giay">00</span><span>Giây</span>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function Dong_ho() {
+                    // var gio = document.getElementById("gio").innerHTML = Giay_hien_tai;
+                    var phut = document.getElementById("phut");
+                    var giay = document.getElementById("giay");
+                    var Gio_hien_tai = new Date().getHours();
+                    var Phut_hien_tai = new Date().getMinutes();
+                    var Giay_hien_tai = new Date().getSeconds();
+                    var gio = document.getElementById("gio").innerHTML =Gio_hien_tai;
+                    phut.innerHTML = Phut_hien_tai;
+                    giay.innerHTML = Giay_hien_tai;
+                }
+                var Dem_gio = setInterval(Dong_ho, 1000);
+            </script>
+            <div id="chao">
+                <script>
+                    var n = new Date();
+                    var gio = n.getHours();
+                    if (gio < 12) {
+                        document.write("Chào buổi sáng");
+                    } else {
+                        document.write("Chào buổi chiều");
+                    }
+                 
+
+                </script>
+            </div>
+        </header>
+        <main>
+            <div class="question">
+                <h1>Javascript Có Thể Làm gì ?</h1>
+                <p align="justify">
+                    <img src="https://thienanblog.com/wp-content/uploads/2015/04/javascript_logo.png" align="left"
+                        width="200px">
+                    JavaScript làm cho trang web trở nên sống động bằng cách thêm chức năng. JavaScript chịu trách nhiệm
+                    cho các yếu tố mà người dùng có thể tương tác, chẳng hạn như trình đơn thả xuống, cửa sổ phương thức
+                    và biểu mẫu liên hệ. Nó cũng được sử dụng để tạo ra những thứ như hình động, trình phát video và bản
+                    đồ tương tác.
+
+                </p>
+            </div>
+
+        </main>
+        <footer>
+           
+
+        </footer>
+    </div>
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS24083</title>
+    <script src="bai2.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 40%;
+            margin: 20px auto;
+            border: 2px solid red;
+        }
+
+        div h2 {
+            background-color: #F473B9;
+            text-align: center;
+            color:#49FF00;
+            padding: 0;
+            margin: 0;
+            line-height: 50px;
+        }
+
+        p {
+            margin: 10px;
+            line-height: 30px;
+        }
+        
+
+        b {
+            color:#F473B9;
+            padding-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="inofor">
+            <h2>Thông Tin Cá Nhân</h2>
+        </div>
+
+        <p>
+            <span>Họ Tên :</span>
+            <b id="hoten">
+                <script>document.write(hoten);</script>
+            </b>
+        </p>
+        <p>
+            <span>Mã SV :</span>
+            <b id="masv">
+                <script>document.write(masv);</script>
+            </b>
+        </p>
+        <p>
+            <span>Ngày Sinh :</span>
+            <b id="ns">
+                <script>
+                    document.getElementById("ns").innerHTML = ngaysinh;
+                </script>
+            </b>
+        </p>
+    </div>
+</body>
+
+</html>

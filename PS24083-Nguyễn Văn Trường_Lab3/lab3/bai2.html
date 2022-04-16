@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS24083</title>
+    <script>
+        do{
+         var fo = prompt("Nhập vào số thứ nhất :");
+         fo = Number(fo);
+         var f1 = prompt("Nhập vào số thứ hai : ")
+         f1 = Number(f1);
+        }while(isNaN(fo) ==true || isNaN(f1)==true);
+
+        
+  
+
+    </script>
+    <style>
+        html,body {
+            text-align: center;
+        }
+        .container{
+            width: 60%;
+            margin:  0 auto;
+            background-color: #A1B57D;
+            line-height: 70px;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid green;
+            border-radius: 10px;
+           
+
+        }
+        h3{
+            color: #FFC300;
+        }
+        span{
+            background-color:#FFC300;
+            width: 100px;
+            margin: 10px;
+            border-radius: 50%;
+        }
+        span:hover{
+            background-color: #FF1818;
+            color: antiquewhite;
+            font-size: 20px;
+            transform: scale(1.1);
+            transition: all .5s linear;
+        }
+            
+      
+            
+        
+    </style>
+</head>
+<body>
+    <h3>DÃY FIBONACCI</h3>
+    <div class="container">
+        
+            <script>
+                for( var i = 0;i <10 ;i++) {
+                    var f = fo + f1 ;
+                    fo = f1 ;
+                    f1 = f;
+                    document.write( "<span>" + f  + "</span>");
+                }
+            </script>
+       
+    </div>
+</body>
+</html>

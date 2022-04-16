@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS24083 - Nguyễn Văn Trường</title>
+</head>
+<style>
+    .container{
+        width: 500px;
+        margin:  0 auto;
+        background-color: antiquewhite;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    input{
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: aliceblue;
+        padding: 5px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    input:hover{
+        transition: all .5s linear;
+        transform: scale(1.02);
+    }
+    #ketqua{
+        color: chocolate;
+        font-weight: bold;
+    }
+    button{
+        width: 100px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+    
+
+        <h1>Bé làm toán</h1>
+
+        <hr>
+
+        <div class="box">
+
+            <span id="so1"></span>+<span id="so2"></span> = <input id="so3" type="text"> 
+
+        </div>
+
+        <div class="kq">
+
+            <span id="ketqua">
+                <p>Hiện đáp án ở đây nha !!!</p>
+
+            </span>
+
+        </div>
+
+        <button id="gpt" onclick="loi()" class="giai" disabled>Giải PT</button>
+
+        <button id="cs" onclick="choso()" class="random">Cho số</button> 
+        <a href=""><button>reset</button></a>
+
+    </div>
+
+
+
+</body>
+
+</html>
+<script>
+ 
+
+    var so = Object();
+
+    so.a;
+    so.b;
+
+        function choso() {
+
+            this.a = Number(Math.round(Math.random()* 10)); 
+            this.b =Number(Math.round(Math.random() * 10)); 
+            document.getElementById("so1").innerHTML = a;
+             var btn = document.getElementById("gpt");
+
+            document.getElementById("so2").innerHTML = b;
+
+            btn.disabled = false;
+
+            btn.className = "random";
+
+        }
+
+        function loi() {
+
+            var so3 = document.getElementById('so3').value;
+
+            var loi = Number(so3)
+
+            if(isNaN(so3)){
+                alert("Lỗi kết quả");
+            }
+
+            ketqua = this.a + this.b;
+
+            document.getElementById("ketqua").innerHTML = " <p>Kết quả của phép tỉnh là: " + ketqua +"</p>";
+            if(so3 == ketqua){
+                document.getElementById("ketqua").innerHTML += "GIỎI QUẢ BÉ OT";
+            }else{
+                document.getElementById("ketqua").innerHTML += "SAI RỒI BÉ TUT";
+            }
+
+        }      
+
+
+
+                   
+
+                 
+</script>

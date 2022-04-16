@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS24083-Nguyễn Văn Trường</title>
+    <script>
+        var ht = prompt("Bạn Tên gì :");
+        var ns = prompt("Bạn Sinh Năm Nào :");
+        function ktTen(ht){
+            if(ht==null){
+               return "Ho va ten sinh vien";
+            }else{
+                return ht;
+            }
+        }
+       
+       
+        function ktBirth(ns) {
+            if(isNaN(ns)==true){
+                alert("Nhap khong đúng đinh dang");
+                return null;
+            }else if( ns >2021){
+                alert("Lỗi");
+                return 0;
+            }
+
+            return ns;
+        }
+        function timtuoi(ns) {
+            var td = new Date();
+            var n = td.getFullYear();
+            return n - ns;
+        }
+        var t = timtuoi(ns);
+    </script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+       
+        .container {
+            width: 40%;
+            margin: 20px auto;
+            border-radius: 20px;
+        }
+
+        h4{
+            text-align: center;
+            line-height: 40px;
+            background-color: chartreuse;
+            color: darkblue;
+            font-size: 25px;
+            border-radius:15px 15px 0 0 ;
+
+        }
+        div .infor{
+            background-color: darkgray;
+            border-radius: 0 0 15px 15px;
+           
+        }
+        span{
+            color:darkblue;
+            padding: 10px;
+            font-weight: 500;
+        }
+        p{
+            line-height: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h4>Thông Tin Sinh Viên</h4>
+        <div class="infor">
+            <p>
+                <span>Họ Tên :</span>
+                <span id="ht">
+                    <script>
+                        document.getElementById("ht").innerHTML=ktTen(ht);
+                    </script>
+                </span>
+            </p>
+            <p>
+                <span>Năm Sinh :</span>
+                <span id="ns">
+                    <script>
+                        document.getElementById("ns").innerHTML= ktBirth(ns);
+                    </script>
+                </span>
+            </p>
+            <p><span>Tuổi :</span>
+                <span id="t">
+                    <script>
+                        document.getElementById("t").innerHTML=t;
+                    </script>
+                </span>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

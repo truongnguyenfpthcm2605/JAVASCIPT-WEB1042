@@ -1,0 +1,81 @@
+html,body{
+    font-family: 'Fira Sans', sans-serif;
+    
+}
+.container{
+    width: 500px;
+    margin: 0 auto;
+    border: 1px solid red;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+h2{
+    text-align: center;
+    color: coral;
+    width: 100%;
+    background-color: darkgreen;
+    line-height: 40px;
+    
+}
+label{
+   font-weight: 200;
+}
+.edit{
+    
+    width: 65%;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: antiquewhite;
+
+}
+form{
+    width: 90%;
+    margin: 0 auto;
+}
+form div{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+button{
+    width: 100px;
+    line-height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: coral;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 10px;
+}
+button:hover{
+    transform: scale(1.04);
+    transition: all .5s linear;
+    background-color: chartreuse;
+}
+#result{
+    color: red;
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.none{
+    display: none;
+}
+.show{
+    display: block;
+}
+.errors{
+    width: 65%;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color:yellow ; 
+}

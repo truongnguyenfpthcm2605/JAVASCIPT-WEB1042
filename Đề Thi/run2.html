@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+         .container{
+            width: 40%;
+            margin: auto;
+            border: 2px solid orange;
+        } 
+        input{
+            margin: 10px;
+            width: 80%;
+            text-align: center;
+            background-color: red;
+        }
+
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        .gioi{
+            color: red;
+            font-size: 30px;
+            text-align: center;
+        }
+        .non{
+            color: orange;
+            font-size: 30px;
+            text-align: center;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label>Số 1</label><input type="text" value="" id="so1" disabled><br>
+        <label>Số 2</label><input type="text" value="" id="so2" disabled><br>
+        <label>KQ</label><input type="text"  value="" id="kq"><br>
+        <button  id="taoham" onclick="taoham()">Tạo hàm</button>
+        <button id="kq1" onclick="kq1()" disabled>Kết quả</button>
+        <p id="text"></p>
+        <img style="display: none;" src="" id="image"></img>
+    </div>
+    <script>
+        function taoham(){
+            so1 = Math.round(100 * Math.random());
+            document.getElementById("so1").value = so1;
+            so2 = Math.round(100 * Math.random());
+            document.getElementById("so2").value = so2;
+            var btn = document.getElementById("kq1");
+            btn.disabled = ! btn.disabled;
+            var btn1 = document.getElementById("taoham");
+            btn1.disabled = ! btn.disabled;
+        }
+        function kq1(){
+            var so1 = document.getElementById("so1").value;
+            var so2 = document.getElementById("so2").value;
+            var nhankq = document.getElementById("kq").value
+            so1 = parseInt(so1);
+            so2 = parseInt(so2);
+            var kq = so1+so2;
+            var text = document.getElementById("text");
+            if(kq == nhankq){
+                text.className = "gioi";
+                document.getElementById("text").innerHTML = "giỏi quá đê";
+                document.getElementById("image").src = "image/amazing.jpg";
+                document.getElementById("image").style.display = "";
+            }else{
+                document.getElementById("text").innerHTML = "Hơi non";
+                document.getElementById("image").src = "image/non.png";
+                text.className = "non";
+                document.getElementById("image").style.display = "";
+            }
+            var btn = document.getElementById("kq1");
+            btn.disabled = ! btn.disabled;
+            var btn1 = document.getElementById("taoham");
+            btn1.disabled = ! btn.disabled;
+        }
+    </script>
+</body>
+
+</html>

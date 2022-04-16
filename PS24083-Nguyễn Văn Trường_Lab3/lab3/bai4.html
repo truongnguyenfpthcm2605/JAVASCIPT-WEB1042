@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS24083</title>
+
+    <style>
+        .container {
+            width: 40%;
+            margin: 10px auto;
+            background-color: #00B4D8;
+            height: auto;
+            padding: 20px;
+
+        }
+
+        .Date {
+            width: 100%;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            align-items: center;
+            border: 5px dotted white;
+            padding-bottom: 10px;
+        }
+
+        .ngay {
+            width: 30%;
+            color: white;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        select {
+            border: none;
+            outline: none;
+            height: 30px;
+            width: 150px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="container">
+        <div class="Date">
+            <div class="ngay">
+                <label for="">Ngày</label> <br>
+                <select >
+                    <script>
+                        for(var i = 1; i<= 31; i++ ) {
+                            if(i==26){
+                                continue;
+                            }
+                            document.write("<option selected>" + i + "</option>");
+                        }
+                        document.write("<option selected>" + 26+ "</option>");
+                        
+                    </script>
+                    
+                </select>
+            </div>
+            <div class="ngay">
+                <label for="">Tháng</label> <br>
+
+               <select >
+                   <script>
+                       var i = 1;
+                       while(i<=12){
+                         
+                           document.write("<option>" + i + "</option>");
+                           i++;
+                         
+                       }
+                   document.write("<option selected>" + 5 + "</option>");
+
+                   </script>
+                       
+                   
+               </select>
+
+
+            </div>
+            <div class="ngay">
+                <label for="">Năm</label> <br>
+                <select>
+                   <script>
+                       var i = 1970;
+                       do{
+                     
+                           document.write("<option>" + i +"</option>");
+                           i++;
+
+                       }while(i < 2023);
+                       document.write("<option  selected>" + 2001 +"</option>");
+                   </script>
+                </select>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>

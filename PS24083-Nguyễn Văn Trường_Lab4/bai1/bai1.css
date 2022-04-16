@@ -1,0 +1,53 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    margin: 10px auto;
+ 
+    background-color: gray;
+    width: 500px;
+    text-align: center;
+    width:500px;
+    line-height: 50px;
+    border: 1px solid darkcyan;
+    
+}
+h1{
+    background-color: darkcyan;
+}
+button{
+    background-color: indianred;
+    outline: none;
+    width: 100px;
+    border: none;
+    line-height: 30px;
+    margin: 5px;
+    color: antiquewhite;
+    border-radius: 10px;
+
+}
+#pt{
+    color: brown;
+    font-size: 25px;
+
+}
+#result{
+    color: chartreuse;
+    font-size: 20px;
+}
+span{
+    font-size: 20px;
+    color:antiquewhite ;
+    font-weight: 900;
+}
+button:hover{
+    background-color: orangered;
+    font-weight: 800;
+    transform: scale(1.05);
+    transition: all .5s linear;
+}

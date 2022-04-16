@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS4083</title>
+    <link rel="stylesheet" href="bai2.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="bang">
+            <h1>CÁC SẢN PHẨM HOA</h1>
+            <table border="1">
+                <tr>
+                    <td> <input type="checkbox"></td>
+                    <td class="td">Tên Sản Phẩm Hóa</td>
+                    <td>Giá</td>
+                    <td>Mua</td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" onchange="daott(this) " checked></td>
+                    <td class="td">Hạnh Phúc Trọn Vẹn</td>
+                    <td>900000</td>
+                    <td><button onclick="them(this)">Chọn</button></td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" onchange="daott(this)" checked></td>
+                    <td class="td">Con Đường Thành Công</td>
+                    <td>1750000</td>
+                    <td><button onclick="them(this)">Chọn</button></td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" onchange="daott(this)" checked></td>
+                    <td class="td">Phú Quý </td>
+                    <td>1300000</td>
+                    <td><button onclick="them(this)">Chọn</button></td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" onchange="daott(this)" checked></td>
+                    <td class="td">Vững Bước</td>
+                    <td>1150000</td>
+                    <td><button onclick="them(this)">Chọn</button></td>
+                </tr>
+                <tr>
+                    <td> <input type="checkbox" onchange="daott(this)" checked></td>
+                    <td class="td">Một Cõi Đi Về</td>
+                    <td>950000</td>
+                    <td><button onclick="them(this)">Chọn</button></td>
+                </tr>
+
+            </table>
+            <div class="road"></div>
+            <div id="hien">
+                <h1 id="title">GIỎ HÀNG CỦA BẠN</h1>
+                <table border="1" id="card">
+                 
+
+                </table>
+                <h2><span id="money">0</span></h2>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script src="bai2.js"></script>

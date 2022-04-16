@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sanpham.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  
+
+    
+</head>
+<body>
+    <div class="container">
+      
+        <form action="">
+            <h1>NHẬP SẢN PHẨM</h1>
+            <div>
+               
+                <input type="text" id="tensp" placeholder="Tên Sản Phẩm" class="edit">
+                <p name="loi"></p>
+            </div>
+            <div>
+              
+                <input type="text" id="giasp" placeholder="Giá Sản Phẩm" class="edit">
+                <p name="loi"></p>
+            </div>
+            <div>
+                <fieldset  class="new">
+                    <legend>Phân Loại</legend>
+                    <input type="radio" id="xachtay" >
+                    <label for="boy">Xách tay</label>
+                    <input type="radio" id="chinhhang">
+                    <label for="girl">Chinh Hãng</label>
+                    
+                </fieldset>
+                <p name="loi"></p>
+            </div>
+            <div>
+                <select name="pro" id="loaisp" class="edit">
+                    <option value="-3">Chủng Loại Sản Phẩm</option>
+                    <option value="0">APPLE</option>
+                    <option value="1">SAMSUNG</option>
+                    <option value="2">OPPO</option>
+                    <option value="3">ASCER</option>
+                    <option value="4">HUAWEI</option>
+                    <option value="5">XIAOMI</option>
+                </select>
+                <p name="loi"></p>
+            </div>
+            <div>
+                <fieldset class="new" >
+                    <legend>Nhà Sản Xuất</legend >
+                    <input type="checkbox"  name="loai" >
+                    <label >DELL</label>
+                    <input type="checkbox"  name="loai" >
+                    <label >LENOVO</label>
+                    <input type="checkbox"  name="loai" >
+                    <label >KHÁC</label>
+                   
+                </fieldset>
+                <p name="loi"></p>
+            </div>
+           
+            <button type="button" onclick="checkform()">Đăng Kí</button>
+          
+        </form>
+    </div>
+</body>
+</html>
+<script src="sanpham.js"></script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  
+
+    
+</head>
+<body>
+    <div class="container">
+      
+        <form action="">
+            <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+            <div>
+               
+                <input type="text" id="masv" placeholder="Mã SV" class="edit">
+                <p id="loi1"></p>
+            </div>
+            <div>
+              
+                <input type="text" id="namesv" placeholder="Họ tên" class="edit">
+                <p id="loi2"></p>
+            </div>
+            <div>
+                <fieldset  class="new">
+                    <legend>Giới Tính</legend>
+                    <input type="radio" id="boy" name="gender"  >
+                    <label for="boy">Nam</label>
+                    <input type="radio" id="girl" name="gender" >
+                    <label for="girl">Nữ</label>
+                    
+                </fieldset>
+                <p id="loi3"></p>
+            </div>
+            <div>
+                <fieldset class="new" >
+                    <legend>Sở Thích</legend >
+                    <input type="checkbox"  name="hobbie" >
+                    <label >Nhìn mưa rơi</label>
+                    <input type="checkbox"  name="hobbie" >
+                    <label >Nghe chim hot</label>
+                    <input type="checkbox"  name="hobbie" >
+                    <label >Ngắm máy bay</label>
+                   
+                </fieldset>
+                <p id="loi4"></p>
+            </div>
+            <div>
+                <select name="pro" id="chooseprovince" class="edit">
+                    <option value="-3">Chọn Tỉnh</option>
+                    <option value="0">Đồng Tháp</option>
+                    <option value="1">TP.HCM</option>
+                    <option value="2">Hà Nội</option>
+                    <option value="3">Nghệ An</option>
+                    <option value="4">Nam Định</option>
+                    <option value="5">Huế</option>
+                </select>
+                <p id="loi5"></p>
+            </div>
+            <button type="button" onclick="checkform()">Đăng Kí</button>
+          
+        </form>
+    </div>
+</body>
+</html>
+<script src="dangky.js"></script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS24083-Nguyễn Văn Trường</title>
+    <script>
+        var a = prompt("Nhập vào a: ");
+        var b = prompt("Nhập vào b: ");
+        var c = prompt("Nhập vào c: ");
+        function dk(x) {
+            if (x == Number(x)) {
+                return x;
+            } else
+                return 0;
+        }
+        a = dk(a);
+        b = dk(b);
+        c = dk(c);
+        var delta = Math.pow(b, 2) - 4 * a * c;
+
+    </script>
+    <style>
+        .container {
+            border: 2px solid blue;
+            width: 40%;
+            margin: 10px auto;
+            border-radius: 10px;
+            padding: 10px;
+            color: brown;
+        }
+
+        h3 {
+            text-align: center;
+            color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>GIẢI PHƯƠNG TRÌNH BẬC 2</h3>
+        <script>
+            document.write("<p>" + a + "x<sup>2</sup> " + "+" + b + "x " + "+ " + c + " = 0</p>");
+            function ptBac2(a, b, c, delta) {
+                if (delta < 0) {
+                    document.write("Phương Trinh Vô Nghiệm ");
+                } else if (delta == 0) {
+                    document.write("Phương Trình Có Ngiệm Kép la x = " + (-b / (2 * a)));
+                } else {
+                    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    document.write("Phương Trình Có 2 Nghiệm Phân biệt");
+                    document.write("<p> x<sub>1</sub> = " + x1 + "</p>");
+                    document.write("<p> x<sub>2</sub> = " + x2 + "</p>");
+                }
+            }
+            ptBac2(a, b, c, delta);
+        </script>
+       
+    </div>
+
+</body>
+
+</html>

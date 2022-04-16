@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS24083 -Nguyễn VĂn Trường</title>
+</head>
+<body>
+    <div class="container">
+        <img src="img/hinh1.jpg"  id="image" onmouseover="hinh1()" onmouseout="hinh2()">
+    </div>
+    <p id="hi"></p>
+</body>
+</html>
+<style>
+    .container{
+        margin: 0 auto;
+        width: 400px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border: 5px solid red;
+    }
+    img{
+        width: 100%;
+        height: 200px;
+    }
+   
+</style>
+<script>
+    function hinh1(){
+        var link = document.getElementById("image");
+        link.src="img/hinh2.jpg";
+    }
+    function hinh2(){
+        var link = document.getElementById("image");
+        link.src="img/hinh1.jpg";
+    }
+   
+</script>

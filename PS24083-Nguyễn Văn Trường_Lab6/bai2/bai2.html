@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS24083</title>
+    <link rel="stylesheet" href="bai2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2>ĐẶT HÀNG</h2>
+        <form action="">
+            <div>
+                <label for="nameproduct">Tên sản phẩm : </label>
+                <input type="text" id="nameproduct" class="edit" placeholder="Nhập vào tên sản phẩm">
+            </div>
+            <div>
+                <label for="type">Loại :</label>
+                <select name="choose" id="choice" class="edit" style="width: 69%;">
+                    <option value="0">Chọn loại sản phẩm</option>
+                    <option value="1">Sản phẩm1</option>
+                    <option value="2">Sản phẩm2</option>
+                    <option value="3">Sản phẩm3</option>
+                    <option value="4">Sản phẩm4</option>
+                    <option value="5">Sản phẩm5</option>
+                </select>
+            </div>
+            <div>
+                <label for="price">Đơn Giá :</label>
+                <input type="text" id="price" class="edit" placeholder="Nhập đơn giá">
+
+            </div>
+            <div>
+                <label for="confirm">Nơi Nhận Hàng : </label>
+                <input type="radio" name="where" id="hereone" onclick="show(false)">
+                <label for="hereone">Nội Thành</label>
+                <input type="radio" name="where" id="heretwo" onclick="show(true)">
+                <label for="heretwo">Ngoại Thành</label>
+            </div>
+            <div class="none" id="transportfee">
+                <label for="transport">Phí Vận chuyển :</label>
+                <input type="text" id="transport" class="edit"  value="100000" disabled>
+            </div>
+            <button onclick="check()" type="button">Đặt Mua</button>
+            <div id="result"></div>
+        </form>
+    </div>
+</body>
+
+</html>
+<script src="bai2.js"></script>

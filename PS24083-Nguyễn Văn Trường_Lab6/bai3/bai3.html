@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS24083</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="bai3.css">
+</head>
+<body>
+    <div class="container">
+        <h2>THÊM NHÂN VIÊN</h2>
+        <form action="">
+            <div>
+                <label for="fullname">Họ và tên :</label>
+                <input type="text" placeholder="Nhập vào họ và tên" id="name" class="edit">
+            </div>
+            <div>
+                <label for="=numbercmnd">Số CMND :</label>
+                <input type="text" placeholder="Nhập vào số CMND" id="numbercmnd" class="edit">
+            </div>
+            <div>
+                <label for="province">Tỉnh :</label>
+                <select class="edit" id="province">
+                    <option value="0">Chọn tỉnh</option>
+                    <option value="1">Dồng Tháp</option>
+                    <option value="2">Hà Nội</option>
+                    <option value="3">Ngệ An</option>
+                    <option value="4">Thanh Hóa</option>
+                    <option value="5">TP.HCM</option>
+                    <option value="6">Huế</option>
+                   
+                </select>
+            </div>
+            <div>
+                <label for="adđinfor">Thông tin bổ sung :</label>
+               <textarea name="" id="note" cols="30" rows="10" class="edit"></textarea>
+            </div>
+            <button type="button" onclick="checkform()">Lưu Thông Tin</button>
+            <div id="error"></div>
+        </form>
+    </div>
+</body>
+</html>
+<script src="bai3.js"></script>

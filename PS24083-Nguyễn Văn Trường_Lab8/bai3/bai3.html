@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS24083_Nguyễn Văn Trường</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Bài học</legend>
+        <select name="" id="hoc">
+            <option value="https://longnv.name.vn/lap-trinh-javascript/javascript-la-gi">Javascript là gì</option>
+            <option value="https://longnv.name.vn/lap-trinh-javascript/bien-kieu-toan-tu-va-bieu-thuc-trong-javascript">Biến kiểu dữ liệu toán tử và biểu thức trong Javascript</option>
+            <option value="https://longnv.name.vn/lap-trinh-javascript/cau-truc-dieu-khien-trong-javacript">Cấu Trúc Điều Khiển trong Javacript</option>
+            <option value="https://longnv.name.vn/lap-trinh-javascript/lap-trinh-doi-tuong-trong-javascript-va-mo-hinh-bom">Lập trình đối tượng trong Javascript và mô hình BOM</option>
+            <option value="https://longnv.name.vn/lap-trinh-javascript/mo-hinh-dom-trong-javascript">Mô hình DOM trong javascript</option>
+            <option value="https://longnv.name.vn/lap-trinh-javascript/vai-van-de-bo-sung-trong-javascript">Vài vấn đề bổ sung trong javascript</option>
+            <option value="https://longnv.name.vn/lap-trinh-javascript/kiem-tra-du-lieu-trong-form-voi-javascript">Kiểm tra dữ liệu trong form với javascript</option>
+            <option value="https://longnv.name.vn/lap-trinh-javascript/gioi-thieu-ve-javascript-framework">Giới Thiệu về Javascript Framework</option>
+            
+
+        </select>
+        <button onclick="hoc()">Xem bài học</button>
+    </fieldset>
+    <script>
+        function hoc(){
+            var bh = document.getElementById("hoc");
+            window.location.assign(bh.value);
+        }
+    </script>
+</body>
+</html>
+<style>
+   .container{
+       width: 500px;
+   }
+    button{
+        line-height: 30px;
+        background-color: chocolate;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        color: aliceblue;
+    }
+    select{
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        background-color: chartreuse;
+    }
+
+</style>

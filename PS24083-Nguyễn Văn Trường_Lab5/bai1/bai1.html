@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Trường - PS4083</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <h2 id="nametext">IPHONE 13 PRO MAX 1TB(2022)</h2>
+       <div class="img">
+        <img src="ip13.jpg" alt="">
+        <i onclick="back()" id="left" class='bx bx-left-arrow'></i>
+        <i onclick="next()" id="right" class='bx bx-right-arrow' ></i>
+       </div>
+       <h4>35.990.000VND</h4>
+        <label for="sl" data-price="35990000" id="pro">Số Lượng :</label>
+        <input type="number" id="sl" value="1">
+        <button onclick="show()">Tính</button>
+        <hr>
+        <h3>Product : <span id="name"></span>  </h3>
+        <h3>Amount: <span id="amount"></span> </h3>
+    </div>
+</body>
+</html>
+<style>
+    body{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .container{
+        width: 550px;
+    }
+    h2{
+        
+        color: #E45826;
+        font-size: 30px;
+    }
+    label{
+        color: #FF1818;
+        font-size: 20px;
+    }
+    input{
+        border: none;
+        outline: none;
+        background-color: antiquewhite;
+        border-radius: 10px;
+        padding: 10px;
+        width: 200px;
+    }
+    input:hover{
+        background-color: cornflowerblue;
+        transform: scale(1.04);
+        transition: all .5s linear;
+    }
+    button{
+        width: 150px;
+        line-height: 30px;
+        border: none;
+        outline: none;
+        background-color: #B5FE83;
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    button:hover{
+        background-color: #E45826;
+        transform: scale(1.04);
+        transition: all .5s linear;
+    }
+    img{
+        width:500px;
+       
+    }
+    h3{
+     color: #FD5D5D;
+    }
+    .img{
+        margin: 10px;
+        position: relative;
+        width: 500px;
+       
+    }
+    #left{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+    }
+    #right{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+    }
+    i{
+        font-size: 30px;
+        color: #8D8DAA;
+        
+    }
+    i:hover{
+        color: #B5FE83;
+    }
+    h4{
+        
+        text-align: center;
+        color: #FD5D5D;
+    }
+</style>
+<script src="bai1.js"></script>
